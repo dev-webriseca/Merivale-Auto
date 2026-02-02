@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import {
   ArrowLeft,
   ArrowRight,
@@ -77,7 +78,7 @@ export function Navigation() {
     <header className="bg-background relative z-50 border-b border-gray-100">
       <div className="container">
         <div className="flex h-20 items-center justify-between px-4 lg:h-28 lg:px-6">
-          <a href="/" className="flex shrink-0 items-center gap-2">
+          <Link href="/" className="flex shrink-0 items-center gap-2">
             <img
               src={LOGOS.logoDark}
               alt="Merivale Auto Centre"
@@ -85,7 +86,7 @@ export function Navigation() {
               height={64}
               className="h-16 w-auto lg:h-20"
             />
-          </a>
+          </Link>
 
           <div
             className="relative hidden lg:flex"
@@ -102,13 +103,13 @@ export function Navigation() {
                 <ChevronDown className="relative top-px ml-1 size-3 transition duration-300 group-hover:translate-y-0.5" />
               </button>
               {NAV_LINKS.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   className="text-foreground text-body-sm-medium inline-flex h-9 items-center px-3 transition-colors hover:text-primary-100"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
             {servicesOpen && (
@@ -123,7 +124,7 @@ export function Navigation() {
                             className="rounded-md border border-gray-200 p-5"
                           >
                             <div className="border-b border-gray-200 pb-4">
-                              <a href={category.href} className="group flex flex-col text-left">
+                              <Link href={category.href} className="group flex flex-col text-left">
                                 <div className="flex items-center">
                                   <strong className="text-body-sm-medium text-gray-900">
                                     {category.title}
@@ -133,11 +134,11 @@ export function Navigation() {
                                 <p className="mt-1 text-xs text-gray-500">
                                   {category.description}
                                 </p>
-                              </a>
+                              </Link>
                             </div>
                             <menu className="mt-4 grid gap-y-3">
                               {category.services.map((service) => (
-                                <a
+                                <Link
                                   key={service.id}
                                   href={service.href}
                                   className="group flex flex-row items-center space-x-3 text-left hover:text-primary-100"
@@ -146,7 +147,7 @@ export function Navigation() {
                                   <div className="flex-1 text-sm font-medium text-gray-600 group-hover:text-primary-100">
                                     {service.title}
                                   </div>
-                                </a>
+                                </Link>
                               ))}
                             </menu>
                           </div>
@@ -269,14 +270,14 @@ export function Navigation() {
                   <ArrowRight className="size-4 text-gray-400" />
                 </button>
                 {NAV_LINKS.map((link) => (
-                  <a
+                  <Link
                     key={link.label}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
                     className="flex w-full items-center border-b border-gray-100 py-6 text-left text-sm font-medium"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
@@ -286,7 +287,7 @@ export function Navigation() {
                 {SERVICES_MENU.map((category) => (
                   <div key={category.id} className="mb-6 rounded-md border border-gray-200 p-5">
                     <div className="border-b border-gray-200 pb-4">
-                      <a
+                      <Link
                         href={category.href}
                         className="group flex flex-col text-left"
                         onClick={() => setMobileOpen(false)}
@@ -298,11 +299,11 @@ export function Navigation() {
                           <ArrowRight className="ml-1 size-4 text-gray-400 transition-transform group-hover:translate-x-1 group-hover:text-primary-100" />
                         </div>
                         <p className="mt-1 text-xs text-gray-500">{category.description}</p>
-                      </a>
+                      </Link>
                     </div>
                     <menu className="mt-4 grid gap-y-3">
                       {category.services.map((service) => (
-                        <a
+                        <Link
                           key={service.id}
                           href={service.href}
                           onClick={() => setMobileOpen(false)}
@@ -313,7 +314,7 @@ export function Navigation() {
                             {service.title}
                           </div>
                           <ArrowRight className="size-4 text-gray-400 transition-transform group-hover:translate-x-1" />
-                        </a>
+                        </Link>
                       ))}
                     </menu>
                   </div>

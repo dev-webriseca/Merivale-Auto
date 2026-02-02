@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 import { CONTACT, LOGOS } from "@/lib/siteData";
@@ -9,7 +10,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-4 lg:gap-8">
           <div className="space-y-8">
             <div>
-              <a href="/" className="inline-block mb-6">
+              <Link href="/" className="inline-block mb-6">
                 <img
                   src={LOGOS.logoLight}
                   alt="Merivale Auto Centre logo"
@@ -17,7 +18,7 @@ export function Footer() {
                   height={80}
                   className="h-24 w-auto"
                 />
-              </a>
+              </Link>
               <p className="text-white/60 leading-relaxed max-w-xs">
                 Quality auto service in Ottawa. From oil changes to diagnostics, our expert team
                 ensures your vehicle stays safe and reliable.
@@ -49,31 +50,31 @@ export function Footer() {
             <h4 className="text-sm font-bold uppercase tracking-wider text-white">Services</h4>
             <ul className="space-y-4">
               <li>
-                <a
+                <Link
                   href="/maintenance"
                   className="text-white/60 hover:text-primary-100 transition-colors duration-200 flex items-center group"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-primary-100 mr-0 group-hover:mr-2 transition-all duration-200" />
                   Maintenance
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/repairs"
                   className="text-white/60 hover:text-primary-100 transition-colors duration-200 flex items-center group"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-primary-100 mr-0 group-hover:mr-2 transition-all duration-200" />
                   Repairs
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/inspections"
                   className="text-white/60 hover:text-primary-100 transition-colors duration-200 flex items-center group"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-primary-100 mr-0 group-hover:mr-2 transition-all duration-200" />
                   Inspections & Towing
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -82,49 +83,49 @@ export function Footer() {
             <h4 className="text-sm font-bold uppercase tracking-wider text-white">Company</h4>
             <ul className="space-y-4">
               <li>
-                <a
+                <Link
                   href="/about"
                   className="text-white/60 hover:text-primary-100 transition-colors duration-200 flex items-center group"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-primary-100 mr-0 group-hover:mr-2 transition-all duration-200" />
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/book"
                   className="text-white/60 hover:text-primary-100 transition-colors duration-200 flex items-center group"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-primary-100 mr-0 group-hover:mr-2 transition-all duration-200" />
                   Book Appointment
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#reviews"
                   className="text-white/60 hover:text-primary-100 transition-colors duration-200 flex items-center group"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-primary-100 mr-0 group-hover:mr-2 transition-all duration-200" />
                   Reviews
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#faq"
                   className="text-white/60 hover:text-primary-100 transition-colors duration-200 flex items-center group"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-primary-100 mr-0 group-hover:mr-2 transition-all duration-200" />
                   FAQ
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/contact"
                   className="text-white/60 hover:text-primary-100 transition-colors duration-200 flex items-center group"
                 >
                   <span className="w-0 group-hover:w-2 h-0.5 bg-primary-100 mr-0 group-hover:mr-2 transition-all duration-200" />
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -176,12 +177,12 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-sm text-white/40">© 2026 Merivale Auto Centre. All rights reserved.</p>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
-              <a href="/privacy" className="text-sm text-white/40 hover:text-white transition-colors">
+              <Link href="/privacy" className="text-sm text-white/40 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-white/40 hover:text-white transition-colors">
+              </Link>
+              <Link href="/terms" className="text-sm text-white/40 hover:text-white transition-colors">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>
