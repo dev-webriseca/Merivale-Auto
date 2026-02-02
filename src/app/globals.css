@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Satoshi Font */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://ext.same-assets.com/1574125113/2663573177.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://ext.same-assets.com/1574125113/1117570491.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://ext.same-assets.com/1574125113/3791305019.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-satoshi: "Satoshi";
+  --background: var(--gray-0);
+  --foreground: var(--gray-900);
+  --card: var(--gray-0);
+  --card-foreground: var(--gray-900);
+  --popover: var(--gray-0);
+  --popover-foreground: var(--gray-900);
+  --primary: var(--primary-100);
+  --primary-foreground: var(--gray-0);
+  --secondary: var(--secondary-100);
+  --secondary-foreground: var(--gray-0);
+  --muted: var(--gray-50);
+  --muted-foreground: var(--gray-400);
+  --accent: var(--primary-25);
+  --accent-foreground: var(--primary-200);
+  --destructive: var(--error-100);
+  --destructive-foreground: var(--gray-0);
+  --border: var(--gray-100);
+  --input: var(--gray-200);
+  --ring: var(--primary-100);
+  --chart-1: var(--primary-100);
+  --chart-2: var(--secondary-100);
+  --chart-3: var(--primary-50);
+  --chart-4: var(--warning-100);
+  --chart-5: var(--success-100);
+  --radius: 0.75rem;
+  --gray-0: oklch(100% 0 0);
+  --gray-25: oklch(98% 0.002 255);
+  --gray-50: oklch(96% 0.004 255);
+  --gray-100: oklch(92% 0.006 255);
+  --gray-200: oklch(85% 0.008 255);
+  --gray-300: oklch(70% 0.01 255);
+  --gray-400: oklch(55% 0.012 255);
+  --gray-500: oklch(42% 0.014 255);
+  --gray-600: oklch(32% 0.016 255);
+  --gray-700: oklch(24% 0.018 255);
+  --gray-800: oklch(16% 0.02 255);
+  --gray-900: oklch(10% 0.022 255);
+  --primary-0: oklch(97% 0.015 255.5);
+  --primary-25: oklch(92% 0.035 255.5);
+  --primary-50: oklch(80% 0.065 255.5);
+  --primary-100: oklch(32.75% 0.1098 255.5);
+  --primary-200: oklch(25% 0.095 255.5);
+  --primary-300: oklch(18% 0.075 255.5);
+  --secondary-0: oklch(97% 0.02 26.83);
+  --secondary-25: oklch(90% 0.06 26.83);
+  --secondary-50: oklch(75% 0.14 26.83);
+  --secondary-100: oklch(57.42% 0.2339 26.83);
+  --secondary-200: oklch(45% 0.2 26.83);
+  --secondary-300: oklch(32% 0.15 26.83);
+  --warning-0: oklch(97% 0.03 85);
+  --warning-25: oklch(92% 0.06 85);
+  --warning-50: oklch(82% 0.12 85);
+  --warning-100: oklch(75% 0.16 80);
+  --warning-200: oklch(50% 0.12 75);
+  --warning-300: oklch(35% 0.08 70);
+  --error-0: oklch(97% 0.02 20);
+  --error-25: oklch(90% 0.05 20);
+  --error-50: oklch(72% 0.14 20);
+  --error-100: oklch(55% 0.22 20);
+  --error-200: oklch(40% 0.18 20);
+  --error-300: oklch(28% 0.12 20);
+  --success-0: oklch(97% 0.02 145);
+  --success-25: oklch(92% 0.04 145);
+  --success-50: oklch(80% 0.1 145);
+  --success-100: oklch(65% 0.16 145);
+  --success-200: oklch(48% 0.12 145);
+  --success-300: oklch(32% 0.08 145);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-satoshi), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-satoshi), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar for reviews */
+.reviews-scroll::-webkit-scrollbar {
+  display: none;
+}
+.reviews-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer utilities {
+  .text-heading-1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .text-heading-4 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .text-heading-5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+  .text-body-lg {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  .text-body-lg-medium {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .text-body-md {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+  }
+  .text-body-md-medium {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.65;
+  }
+  .text-body-sm {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  .text-body-sm-medium {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+  .text-body-xs {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  .text-body-xs-medium {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+}
